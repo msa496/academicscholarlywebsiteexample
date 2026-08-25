@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://antoniajmillet.github.io/sitemap.xml

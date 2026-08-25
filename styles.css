@@ -1,0 +1,1549 @@
+:root {
+  --ink: #203039;
+  --ink-soft: #48585e;
+  --coral: #d95f47;
+  --coral-dark: #a83f2e;
+  --marigold: #efb84f;
+  --teal: #24736c;
+  --teal-dark: #17564f;
+
+  --hero-background: #fffaf2;
+  --about-background: #f8e8df;
+  --research-background: #fffefa;
+  --publications-background: #dff1eb;
+  --mentoring-background: #fff1cf;
+  --contact-background: #dceef4;
+
+  --white: #ffffff;
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--hero-background);
+  color: var(--ink);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+summary {
+  font: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--marigold);
+  border-bottom: 2px solid var(--ink);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: min(var(--max-width), 94vw);
+  min-height: 70px;
+  margin: 0 auto;
+}
+
+.site-name {
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: 1.28rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-navigation {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.site-navigation::-webkit-scrollbar {
+  display: none;
+}
+
+.site-navigation a {
+  position: relative;
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-navigation a::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.28rem;
+  left: 0;
+  height: 3px;
+  background: var(--teal-dark);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
+}
+
+.site-navigation a:hover::after,
+.site-navigation a:focus::after {
+  transform: scaleX(1);
+}
+
+.nav-separator {
+  margin: 0 0.7rem;
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 740px) 225px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  width: min(1040px, 90vw);
+  margin: 0 auto;
+  padding: 4rem 0 4.25rem;
+  background: var(--hero-background);
+}
+
+.hero-copy {
+  min-width: 0;
+}
+
+.hero-fields {
+  margin: 0 0 1.05rem;
+  color: var(--teal-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  white-space: nowrap;
+}
+
+.hero-fields span {
+  padding: 0 0.45rem;
+  color: var(--coral);
+}
+
+.hero h1 {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(3rem, 6vw, 5.1rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  white-space: nowrap;
+}
+
+.fellowship-line {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.fellowship-line a {
+  color: var(--coral-dark);
+  text-decoration-color: var(--marigold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.24rem;
+}
+
+.fellowship-line a:hover,
+.fellowship-line a:focus {
+  color: var(--teal-dark);
+  text-decoration-color: var(--teal);
+}
+
+.fellowship-line span {
+  color: var(--ink-soft);
+}
+
+.hero-position {
+  margin: 0.75rem 0 0;
+  color: var(--ink-soft);
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.hero-position span {
+  padding: 0 0.42rem;
+  color: var(--marigold);
+  font-weight: 700;
+}
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 1.85rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.72rem 1.2rem;
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  font-size: 0.94rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.button:hover,
+.button:focus {
+  transform: translateY(-2px);
+}
+
+.button-primary {
+  background: var(--coral);
+  color: var(--white);
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  background: var(--coral-dark);
+}
+
+.button-secondary {
+  background: var(--white);
+  color: var(--ink);
+}
+
+.button-secondary:hover,
+.button-secondary:focus {
+  background: var(--marigold);
+}
+
+.hero-image-frame {
+  width: 225px;
+  justify-self: center;
+  overflow: hidden;
+  background: transparent;
+  border: 2px solid var(--ink);
+}
+
+.hero-image-frame img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* SECTION BACKGROUNDS */
+
+.section-band {
+  width: 100%;
+  border-top: 2px solid var(--ink);
+  scroll-margin-top: 70px;
+}
+
+.about-band {
+  background: var(--about-background);
+}
+
+.research-band {
+  background: var(--research-background);
+}
+
+.publications-band {
+  background: var(--publications-background);
+}
+
+.mentoring-band {
+  background: var(--mentoring-background);
+}
+
+.contact-band {
+  background: var(--contact-background);
+  border-bottom: 2px solid var(--ink);
+}
+
+.content-section {
+  width: min(var(--max-width), 90vw);
+  margin: 0 auto;
+  padding: 5.25rem 0;
+}
+
+.research-band .content-section {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.publications-band .content-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.mentoring-band .content-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact-band .content-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+/* SECTION HEADINGS */
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.75rem;
+}
+
+.section-title h2 {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.section-title::after {
+  width: 100%;
+  height: 5px;
+  background:
+    linear-gradient(
+      90deg,
+      var(--coral) 0 34%,
+      var(--marigold) 34% 67%,
+      var(--teal) 67% 100%
+    );
+  content: "";
+}
+
+/* BODY TEXT */
+
+.prose {
+  width: 100%;
+  max-width: 920px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.prose p {
+  margin: 0 0 1.4rem;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.inline-link {
+  color: var(--coral-dark);
+  font-weight: 700;
+  text-decoration-color: var(--marigold);
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.18rem;
+}
+
+.inline-link:hover,
+.inline-link:focus {
+  color: var(--teal-dark);
+  text-decoration-color: var(--teal);
+}
+
+/* RESEARCH AREAS */
+
+.research-area {
+  margin-top: 6.5rem;
+}
+
+.research-area:first-of-type {
+  margin-top: 0;
+}
+
+.research-area-title {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+.research-area-title span {
+  padding-top: 0.5rem;
+  color: var(--coral);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  opacity: 0.82;
+}
+
+.research-area-title h3 {
+  max-width: 830px;
+  margin: 0;
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.35rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+/* RESEARCH CARDS */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.project-grid-single {
+  grid-template-columns: 1fr;
+}
+
+.project-card {
+  height: 100%;
+  overflow: hidden;
+  background: var(--white);
+  border: 2px solid var(--ink);
+  border-radius: 4px;
+}
+
+.project-card summary {
+  display: flex;
+  height: 100%;
+  min-height: 520px;
+  flex-direction: column;
+  cursor: pointer;
+  list-style: none;
+}
+
+.project-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-image {
+  height: 225px;
+  overflow: hidden;
+  background: var(--contact-background);
+  border-bottom: 2px solid var(--ink);
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-introduction {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1.65rem;
+}
+
+.project-status {
+  margin: 0 0 0.8rem;
+  color: var(--coral-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.project-introduction h4 {
+  min-height: 2.25em;
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font-family: "Newsreader", Georgia, serif;
+  font-size: clamp(1.75rem, 2.8vw, 2.45rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.project-preview {
+  min-height: 6.4em;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+.project-action {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: 1.4rem;
+  padding-bottom: 0.1rem;
+  border-bottom: 3px solid var(--marigold);
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-action::after {
+  color: var(--coral);
+  content: " +";
+}
+
+.project-card[open] {
+  grid-column: 1 / -1;
+  height: auto;
+}
+
+.project-card[open] summary {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  min-height: 0;
+  height: auto;
+}
+
+.project-card[open] .project-image {
+  height: 100%;
+  min-height: 280px;
+  border-right: 2px solid var(--ink);
+  border-bottom: 0;
+}
+
+.project-card[open] .project-introduction h4,
+.project-card[open] .project-preview {
+  min-height: 0;
+}
+
+.project-card[open] .project-action {
+  margin-top: 1.5rem;
+  padding-top: 0;
+}
+
+.project-card[open] .project-action::after {
+  content: " −";
+}
+
+.project-details {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-top: 2px solid var(--ink);
+}
+
+.project-details p {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* FULL-WIDTH DRYLAND CARD */
+
+.feature-card {
+  width: 100%;
+}
+
+.feature-card summary,
+.feature-card[open] summary {
+  display: grid;
+  grid-template-columns: minmax(320px, 42%) minmax(0, 58%);
+  min-height: 340px;
+  height: auto;
+}
+
+.feature-card .project-image,
+.feature-card[open] .project-image {
+  height: 100%;
+  min-height: 340px;
+  border-right: 2px solid var(--ink);
+  border-bottom: 0;
+}
+
+.feature-card .project-introduction {
+  justify-content: center;
+  padding: clamp(2rem, 5vw, 3.5rem);
+}
+
+.feature-card .project-introduction h4,
+.feature-card .project-preview {
+  min-height: 0;
+}
+
+.feature-card .project-action {
+  margin-top: 1.8rem;
+  padding-top: 0;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding-bottom: 0.12rem;
+  border-bottom: 3px solid var(--marigold);
+  color: var(--teal-dark);
+  font-size: 0.96rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:focus {
+  border-color: var(--coral);
+  color: var(--coral-dark);
+}
+
+/* PUBLICATIONS */
+
+.disabled-button {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.55);
+  border-color: var(--ink-soft);
+  color: var(--ink-soft);
+  cursor: not-allowed;
+}
+
+.disabled-button:hover,
+.disabled-button:focus {
+  transform: none;
+}
+
+/* CONTACT */
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  max-width: 920px;
+  margin-right: auto;
+  margin-left: auto;
+  border-top: 2px solid var(--ink);
+  border-left: 2px solid var(--ink);
+}
+
+.contact-list a {
+  display: flex;
+  min-height: 125px;
+  flex-direction: column;
+  padding: 1.4rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 150ms ease;
+}
+
+.contact-list a:hover,
+.contact-list a:focus {
+  background: var(--marigold);
+}
+
+.contact-list a:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+.contact-list span {
+  margin-bottom: 0.45rem;
+  color: var(--coral-dark);
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+
+.contact-list strong {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+}
+
+/* FOOTER */
+
+.site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5vw;
+  background: var(--teal-dark);
+  color: var(--white);
+  font-size: 0.92rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--white);
+  font-weight: 700;
+  text-underline-offset: 0.25rem;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+  .header-inner {
+    gap: 1rem;
+  }
+
+  .site-name {
+    font-size: 1.16rem;
+  }
+
+  .site-navigation a {
+    font-size: 0.86rem;
+  }
+
+  .nav-separator {
+    margin: 0 0.45rem;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 185px;
+    width: min(920px, 90vw);
+    gap: 2.5rem;
+    padding-top: 4rem;
+    padding-bottom: 4.25rem;
+  }
+
+  .hero-image-frame {
+    width: 185px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 6vw, 4.6rem);
+  }
+
+  .hero-fields,
+  .fellowship-line,
+  .hero-position {
+    font-size: 0.92rem;
+  }
+}
+
+/* SMALL TABLET */
+
+@media (max-width: 780px) {
+  .header-inner {
+    width: 96vw;
+  }
+
+  .site-name {
+    margin-right: 0.5rem;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 155px;
+    gap: 1.75rem;
+    width: 92vw;
+  }
+
+  .hero-image-frame {
+    width: 155px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.45rem, 8vw, 3.7rem);
+  }
+
+  .hero-fields {
+    white-space: normal;
+  }
+
+  .fellowship-line,
+  .hero-position {
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card summary {
+    min-height: 0;
+  }
+
+  .project-introduction h4,
+  .project-preview {
+    min-height: 0;
+  }
+
+  .project-action {
+    margin-top: 1.5rem;
+    padding-top: 0;
+  }
+
+  .project-card[open] summary,
+  .feature-card summary,
+  .feature-card[open] summary {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card[open] .project-image,
+  .feature-card .project-image,
+  .feature-card[open] .project-image {
+    height: 280px;
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 2px solid var(--ink);
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  body {
+    font-size: 17px;
+  }
+
+  .site-header {
+    position: relative;
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .site-name {
+    font-size: 1.05rem;
+  }
+
+  .site-navigation a {
+    font-size: 0.82rem;
+  }
+
+  .nav-separator {
+    margin: 0 0.34rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 3.25rem;
+    padding-bottom: 4rem;
+  }
+
+  .hero-image-frame {
+    grid-row: 1;
+    width: 170px;
+    justify-self: start;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .content-section {
+    width: 92vw;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .research-band .content-section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .publications-band .content-section,
+  .mentoring-band .content-section,
+  .contact-band .content-section {
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+  }
+
+  .section-title {
+    gap: 0.9rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-title h2 {
+    font-size: clamp(2.5rem, 13vw, 4rem);
+  }
+
+  .section-title::after {
+    height: 4px;
+  }
+
+  .research-area {
+    margin-top: 5.5rem;
+  }
+
+  .research-area-title {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .contact-list {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
+
+/* === MOBILE HEADER AND HERO UPDATE === */
+
+/*
+  The hero buttons are separate from hero-copy so the portrait can appear
+  between the text and buttons on mobile while preserving the desktop layout.
+*/
+
+.hero {
+  grid-template-areas:
+    "copy image"
+    "links image";
+  row-gap: 1.85rem;
+}
+
+.hero-copy {
+  display: flex;
+  grid-area: copy;
+  flex-direction: column;
+}
+
+.hero-copy h1 {
+  order: 2;
+}
+
+.hero-fields {
+  order: 1;
+}
+
+.fellowship-line {
+  order: 3;
+}
+
+.hero-position {
+  order: 4;
+}
+
+.hero-links {
+  grid-area: links;
+  margin-top: 0;
+}
+
+.hero-image-frame {
+  grid-area: image;
+}
+
+.hero-fields .hero-divider {
+  padding: 0 0.45rem;
+  color: var(--coral);
+}
+
+.fellowship-line .hero-divider {
+  color: var(--ink-soft);
+}
+
+.hero-position .hero-divider {
+  padding: 0 0.42rem;
+  color: var(--marigold);
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    row-gap: 1.65rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .hero {
+    row-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    font-size: 17px;
+  }
+
+  .site-header {
+    position: relative;
+  }
+
+  .header-inner {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem 0 0.85rem;
+  }
+
+  .site-name {
+    margin: 0;
+    font-size: 1.12rem;
+    line-height: 1.2;
+  }
+
+  .site-navigation {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: visible;
+    row-gap: 0.1rem;
+    white-space: normal;
+  }
+
+  .site-navigation a {
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .nav-separator {
+    margin: 0 0.28rem;
+    font-size: 0.78rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "copy"
+      "image"
+      "links";
+    width: calc(100% - 2rem);
+    column-gap: 0;
+    row-gap: 1.8rem;
+    padding-top: 2.75rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-copy {
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    order: 1;
+    margin: 0 0 1.5rem;
+    font-size: clamp(2.5rem, 11vw, 3.35rem);
+    line-height: 0.98;
+    white-space: normal;
+  }
+
+  .hero-fields {
+    display: grid;
+    order: 2;
+    gap: 0.2rem;
+    margin: 0 0 1.5rem;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    white-space: normal;
+  }
+
+  .hero-field,
+  .position-item,
+  .fellowship-line a {
+    display: block;
+  }
+
+  .hero-copy .hero-divider {
+    display: none;
+  }
+
+  .fellowship-line {
+    display: grid;
+    order: 3;
+    align-items: start;
+    gap: 0.35rem;
+    margin: 0 0 1.4rem;
+    font-size: 0.93rem;
+    line-height: 1.45;
+    white-space: normal;
+  }
+
+  .hero-position {
+    display: grid;
+    order: 4;
+    gap: 0.2rem;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    white-space: normal;
+  }
+
+  .hero-image-frame {
+    grid-area: image;
+    grid-row: auto;
+    width: min(260px, 78vw);
+    justify-self: center;
+  }
+
+  .hero-links {
+    display: grid;
+    grid-area: links;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.65rem;
+    margin: 0;
+  }
+
+  .hero-links .button {
+    min-width: 0;
+    min-height: 56px;
+    padding: 0.65rem 0.45rem;
+    font-size: 0.78rem;
+    line-height: 1.25;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+/* === MOBILE POLISH V2 === */
+
+@media (max-width: 600px) {
+  /*
+    1. Keep the mobile header fixed at the top while scrolling.
+  */
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  /*
+    2. Make the header shorter and keep the navigation beneath the name.
+  */
+
+  .header-inner {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    align-items: flex-start;
+    gap: 0.15rem;
+    padding: 0.55rem 0 0.65rem;
+  }
+
+  .site-name {
+    margin: 0;
+    font-size: 1.08rem;
+    line-height: 1.15;
+  }
+
+  .site-navigation {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .site-navigation a,
+  .nav-separator {
+    font-size: clamp(0.68rem, 2.7vw, 0.78rem);
+    line-height: 1.45;
+  }
+
+  .nav-separator {
+    margin: 0 0.16rem;
+  }
+
+  /*
+    3. Give every hero text group the same left edge.
+  */
+
+  .hero {
+    width: calc(100% - 2rem);
+    row-gap: 1.55rem;
+    padding-top: 2.4rem;
+    padding-bottom: 3.25rem;
+  }
+
+  .hero-copy {
+    width: 100%;
+    align-items: flex-start;
+    padding-right: 0.6rem;
+    padding-left: 0.6rem;
+  }
+
+  .hero-copy > * {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .hero h1 {
+    margin: 0 0 1.3rem;
+    color: var(--ink);
+    font-size: clamp(2.55rem, 11vw, 3.25rem);
+    line-height: 1;
+  }
+
+  .hero-fields {
+    margin: 0 0 1.35rem;
+    padding: 0;
+  }
+
+  .fellowship-line {
+    margin: 0 0 1.35rem;
+    padding: 0;
+  }
+
+  .hero-position {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+    4. Restore the original green, rust-brown, gray and black colors.
+  */
+
+  .hero-fields .hero-field {
+    padding: 0;
+    color: var(--teal-dark);
+  }
+
+  .fellowship-line a {
+    color: var(--coral-dark);
+  }
+
+  .hero-position .position-item {
+    padding: 0;
+    color: var(--ink-soft);
+    font-weight: 500;
+  }
+
+  .hero-copy .hero-divider {
+    display: none;
+  }
+
+  /*
+    5. Keep the portrait centered but make it less dominant.
+  */
+
+  .hero-image-frame {
+    width: min(225px, 68vw);
+    justify-self: center;
+  }
+
+  /*
+    6. Keep both buttons together in one equal-width row.
+  */
+
+  .hero-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  .hero-links .button {
+    width: 100%;
+    min-width: 0;
+    min-height: 52px;
+    padding: 0.62rem 0.4rem;
+    font-size: 0.77rem;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  /*
+    Prevent anchored sections from hiding underneath the sticky header.
+  */
+
+  .section-band {
+    scroll-margin-top: 105px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-navigation a,
+  .nav-separator {
+    font-size: 0.65rem;
+  }
+
+  .nav-separator {
+    margin: 0 0.11rem;
+  }
+
+  .hero-copy {
+    padding-right: 0.35rem;
+    padding-left: 0.35rem;
+  }
+
+  .hero-image-frame {
+    width: min(210px, 68vw);
+  }
+
+  .hero-links .button {
+    font-size: 0.72rem;
+  }
+}
+
+/* === FINAL MOBILE HEADER AND COLOR POLISH === */
+
+/*
+  Restore the intended desktop hero colors after the hero text
+  was divided into separate spans.
+*/
+
+.hero-fields .hero-field {
+  padding: 0;
+  color: var(--teal-dark);
+}
+
+.hero-position .position-item {
+  padding: 0;
+  color: var(--ink-soft);
+  font-weight: 500;
+}
+
+/*
+  Mobile-only adjustments.
+*/
+
+@media (max-width: 600px) {
+  /*
+    Keep the complete yellow header—including the name and all
+    navigation links—at the top while the page scrolls.
+  */
+
+  .site-header {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+
+  .header-inner {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    align-items: flex-start;
+    gap: 0.22rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.72rem;
+  }
+
+  /*
+    Slightly enlarge the header text.
+  */
+
+  .site-name {
+    font-size: 1.16rem;
+    line-height: 1.2;
+  }
+
+  .site-navigation {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  .site-navigation a,
+  .nav-separator {
+    font-size: clamp(0.73rem, 2.85vw, 0.82rem);
+    line-height: 1.5;
+  }
+
+  .nav-separator {
+    margin-right: 0.18rem;
+    margin-left: 0.18rem;
+  }
+
+  /*
+    Slightly enlarge the hero text while retaining the intended colors.
+  */
+
+  .hero-fields {
+    font-size: 1.02rem;
+  }
+
+  .hero-fields .hero-field {
+    color: var(--teal-dark);
+  }
+
+  .fellowship-line {
+    font-size: 0.98rem;
+  }
+
+  .fellowship-line a {
+    color: var(--coral-dark);
+  }
+
+  .hero-position {
+    font-size: 1rem;
+  }
+
+  .hero-position .position-item {
+    color: var(--ink-soft);
+  }
+
+  /*
+    Match both button labels to the research-field text size.
+    Button dimensions and photo spacing remain unchanged.
+  */
+
+  .hero-links .button {
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+    font-size: 1.02rem;
+    line-height: 1.15;
+  }
+
+  /*
+    Account for the taller sticky header when using navigation links.
+  */
+
+  .section-band {
+    scroll-margin-top: 112px;
+  }
+}
+
+@media (max-width: 370px) {
+  .site-navigation a,
+  .nav-separator {
+    font-size: 0.69rem;
+  }
+
+  .nav-separator {
+    margin-right: 0.13rem;
+    margin-left: 0.13rem;
+  }
+
+  .hero-fields,
+  .hero-links .button {
+    font-size: 0.94rem;
+  }
+
+  .fellowship-line,
+  .hero-position {
+    font-size: 0.93rem;
+  }
+}
+
+/* === IOS MOBILE FIXED HEADER V3 === */
+
+@media (max-width: 600px) {
+  /*
+    A fixed header is more reliable than sticky inside the
+    iPhone Safari and Messenger browsers.
+  */
+
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip !important;
+  }
+
+  .site-header {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    background: var(--marigold);
+  }
+
+  /*
+    JavaScript measures the real header height and gives the
+    page matching space so nothing is hidden beneath it.
+  */
+
+  main {
+    padding-top: var(--mobile-header-height, 82px);
+  }
+
+  /*
+    Keep the full name and navigation inside the fixed header.
+  */
+
+  .header-inner {
+    width: calc(100% - 2rem);
+    min-height: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.22rem;
+    padding-top: 0.65rem;
+    padding-bottom: 0.72rem;
+  }
+
+  .site-navigation {
+    width: 100%;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow: visible;
+    white-space: nowrap;
+  }
+
+  /*
+    Give the buttons the same text size as the header links,
+    while restoring comfortable space around each label.
+  */
+
+  .hero-links .button {
+    min-height: 58px;
+    padding: 0.9rem 0.55rem;
+    font-size: clamp(0.73rem, 2.85vw, 0.82rem);
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  /*
+    Keep navigation destinations visible beneath the fixed header.
+  */
+
+  .section-band {
+    scroll-margin-top:
+      calc(var(--mobile-header-height, 82px) + 12px);
+  }
+}
+
+@media (max-width: 370px) {
+  .hero-links .button {
+    padding-right: 0.35rem;
+    padding-left: 0.35rem;
+    font-size: 0.69rem;
+  }
+}

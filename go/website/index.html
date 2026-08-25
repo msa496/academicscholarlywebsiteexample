@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!--
+    PERMANENT QR-CODE REDIRECT
+
+    The reusable QR code points to:
+    https://antoniajmillet.github.io/go/website/
+
+    It does NOT point directly to the website homepage.
+
+    Reason:
+    Printed QR codes cannot be edited after they are distributed. By pointing the
+    QR code to this redirect page, I can later change the final destination simply
+    by editing this file. The already-printed QR code will continue to work.
+
+    Current final destination:
+    https://antoniajmillet.github.io/
+
+    To change the destination later:
+    1. Replace the destination URL in BOTH places below:
+       - the meta refresh tag
+       - the JavaScript redirect
+    2. Also update the fallback link in the body.
+    3. Commit and push the changes to GitHub.
+
+    The UTM parameters help analytics software identify visits made through the
+    printed QR code.
+
+    The temporary testing URL ending in ?refresh=1 was only used to bypass a
+    potentially cached 404 page. It should NOT be placed in the QR code.
+  -->
+
+  <title>Redirecting | Antonia J. Millet</title>
+
+  <!-- Prevent this utility redirect page from appearing in search results. -->
+  <meta name="robots" content="noindex">
+
+  <!-- Backup redirect for browsers where JavaScript is unavailable. -->
+  <meta
+    http-equiv="refresh"
+    content="0; url=https://antoniajmillet.github.io/?utm_source=qr&utm_medium=print&utm_campaign=website"
+  >
+
+  <!-- Primary redirect. replace() avoids adding this page to browser history. -->
+  <script>
+    window.location.replace(
+      "https://antoniajmillet.github.io/?utm_source=qr&utm_medium=print&utm_campaign=website"
+    );
+  </script>
+</head>
+
+<body>
+  <!-- Fallback link in case neither automatic redirect method works. -->
+  <p>
+    Redirecting to
+    <a href="https://antoniajmillet.github.io/?utm_source=qr&utm_medium=print&utm_campaign=website">
+      Antonia J. Millet’s website
+    </a>.
+  </p>
+</body>
+</html>
