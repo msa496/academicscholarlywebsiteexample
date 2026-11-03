@@ -1,6 +1,6 @@
-# Margot Accettura
+# Margot Accettura's Professional Website
 
-This webpage was created for use during the Falvey Forum webinar Creating an Academic Web Presence with GitHub Pages taking place on November 11, 2026 and developed by Erica Hayes and Margot Accettura. It is an example of a professional web presence detailing Margot's work as STEM Librarian at Villanova University's Falvey Library.
+This website was created for use during the Falvey Forum webinar Creating an Academic Web Presence with GitHub Pages developed by Erica Hayes and Margot Accettura taking place on November 11, 2026. It is an example of a professional web presence detailing Margot's work as STEM Librarian at Villanova University's Falvey Library.
 
 This page was developed through use of the Academic Website Guide and theme created by Antonia Millet:
 
