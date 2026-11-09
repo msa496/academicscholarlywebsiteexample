@@ -3,16 +3,16 @@
   --ink-soft: #48585e;
   --coral: #d95f47;
   --coral-dark: #a83f2e;
-  --marigold: #efb84f;
+  --sorbet1: #B7C396;
   --teal: #24736c;
-  --teal-dark: #17564f;
+  --brown: #BA9A91;
 
-  --hero-background: #F5F5F5;
-  --about-background: #8FBC8F;
+  --hero-background: #EDECEC;
+  --about-background: #E0E7D7;
   --research-background: #fffefa;
-  --publications-background: #A9BA9D;
+  --publications-background: #CCCCCC;
   --mentoring-background: #fff1cf;
-  --contact-background: #6495ED;
+  --contact-background: #FEFEFE;
 
   --white: #ffffff;
   --max-width: 1180px;
@@ -54,7 +54,7 @@ summary {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--marigold);
+  background: var(--sorbet1);
   border-bottom: 2px solid var(--ink);
 }
 
@@ -107,7 +107,7 @@ summary {
   bottom: -0.28rem;
   left: 0;
   height: 3px;
-  background: var(--teal-dark);
+  background: var(--brown);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
@@ -121,7 +121,7 @@ summary {
 
 .nav-separator {
   margin: 0 0.7rem;
-  color: var(--teal-dark);
+  color: var(--brown);
   font-weight: 700;
 }
 
@@ -145,7 +145,7 @@ summary {
 
 .hero-fields {
   margin: 0 0 1.05rem;
-  color: var(--teal-dark);
+  color: var(--brown);
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.025em;
@@ -180,14 +180,14 @@ summary {
 
 .fellowship-line a {
   color: var(--coral-dark);
-  text-decoration-color: var(--marigold);
+  text-decoration-color: var(--sorbet1);
   text-decoration-thickness: 3px;
   text-underline-offset: 0.24rem;
 }
 
 .fellowship-line a:hover,
 .fellowship-line a:focus {
-  color: var(--teal-dark);
+  color: var(--brown);
   text-decoration-color: var(--teal);
 }
 
@@ -205,7 +205,7 @@ summary {
 
 .hero-position span {
   padding: 0 0.42rem;
-  color: var(--marigold);
+  color: var(--sorbet1);
   font-weight: 700;
 }
 
@@ -255,7 +255,7 @@ summary {
 
 .button-secondary:hover,
 .button-secondary:focus {
-  background: var(--marigold);
+  background: var(--sorbet1);
 }
 
 .hero-image-frame {
@@ -355,7 +355,7 @@ summary {
     linear-gradient(
       90deg,
       var(--coral) 0 34%,
-      var(--marigold) 34% 67%,
+      var(--sorbet1) 34% 67%,
       var(--teal) 67% 100%
     );
   content: "";
@@ -384,14 +384,14 @@ summary {
 .inline-link {
   color: var(--coral-dark);
   font-weight: 700;
-  text-decoration-color: var(--marigold);
+  text-decoration-color: var(--sorbet1);
   text-decoration-thickness: 3px;
   text-underline-offset: 0.18rem;
 }
 
 .inline-link:hover,
 .inline-link:focus {
-  color: var(--teal-dark);
+  color: var(--brown);
   text-decoration-color: var(--teal);
 }
 
@@ -520,7 +520,7 @@ summary {
   margin-top: auto;
   padding-top: 1.4rem;
   padding-bottom: 0.1rem;
-  border-bottom: 3px solid var(--marigold);
+  border-bottom: 3px solid var(--sorbet1);
   color: var(--ink);
   font-size: 0.9rem;
   font-weight: 700;
@@ -618,8 +618,8 @@ summary {
   display: inline-block;
   margin-top: 1rem;
   padding-bottom: 0.12rem;
-  border-bottom: 3px solid var(--marigold);
-  color: var(--teal-dark);
+  border-bottom: 3px solid var(--sorbet1);
+  color: var(--brown);
   font-size: 0.96rem;
   font-weight: 700;
   text-decoration: none;
@@ -674,7 +674,7 @@ summary {
 
 .contact-list a:hover,
 .contact-list a:focus {
-  background: var(--marigold);
+  background: var(--sorbet1);
 }
 
 .contact-list a:last-child:nth-child(odd) {
@@ -702,7 +702,7 @@ summary {
   align-items: center;
   justify-content: space-between;
   padding: 2rem 5vw;
-  background: var(--teal-dark);
+  background: var(--brown);
   color: var(--white);
   font-size: 0.92rem;
 }
@@ -978,7 +978,7 @@ summary {
 
 .hero-position .hero-divider {
   padding: 0 0.42rem;
-  color: var(--marigold);
+  color: var(--sorbet1);
   font-weight: 700;
 }
 
@@ -1238,7 +1238,7 @@ summary {
 
   .hero-fields .hero-field {
     padding: 0;
-    color: var(--teal-dark);
+    color: var(--brown);
   }
 
   .fellowship-line a {
@@ -1326,7 +1326,7 @@ summary {
 
 .hero-fields .hero-field {
   padding: 0;
-  color: var(--teal-dark);
+  color: var(--brown);
 }
 
 .hero-position .position-item {
@@ -1399,7 +1399,7 @@ summary {
   }
 
   .hero-fields .hero-field {
-    color: var(--teal-dark);
+    color: var(--brown);
   }
 
   .fellowship-line {
@@ -1482,7 +1482,7 @@ summary {
     left: 0;
     z-index: 2000;
     width: 100%;
-    background: var(--marigold);
+    background: var(--sorbet1);
   }
 
   /*
